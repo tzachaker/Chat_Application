@@ -60,3 +60,5 @@ In both server and client scripts, the UDP (User Datagram Protocol) section faci
   
 ### Important Note:
 While UDP suffices for some data transfer scenarios, its lack of certain features makes it less suitable for larger or less reliable networks. In such cases, TCP or alternative protocols may be more appropriate.
+
+Enjoy exploring and experimenting with the Chat Application simulation!
