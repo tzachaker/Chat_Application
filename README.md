@@ -1,21 +1,21 @@
-### Chat Application User Manual
+# Chat Application User Manual
 
 Welcome to the user manual for the Chat Application repository. This guide outlines the functionality and usage of the Python-based chat application, which employs both TCP and UDP protocols. The repository comprises a server and a client component designed for seamless message and file exchange.
 
 ## Server
-# System Requirements
+### System Requirements
 - Python 3.x
   
-# Overview
+### Overview
 The server script (server.py) serves as the backbone of the chat application. It establishes a TCP socket, allowing it to listen for incoming connections from clients. Multiple clients can connect simultaneously, enabling them to engage in real-time conversations. The server takes note of all connected clients, storing their respective nicknames.
 
-# Getting Started
+### Getting Started
 To set up the chat server, execute the following command on your chosen machine:
 python server.py
 
 Upon execution, the server will display a message confirming its readiness to manage incoming connections. Clients can now establish connections using the provided client script.
 
-# Supported Commands
+### Supported Commands
 The server is equipped to handle various commands from clients, including:
 
 - broadcast: Sending messages to all connected clients.
@@ -24,18 +24,18 @@ The server is equipped to handle various commands from clients, including:
 - files: Retrieving a list of available files on the server.
 - download,<file_name>: Initiating the download of a file from the server.
   
-# Important Note
+### Important Note
 For clients to connect from different devices, the server must be hosted on a machine with a publicly accessible IP address or domain name.
 
 ## Client
-# System Requirements
+### System Requirements
 - Python 3.x
 - Tkinter (Python GUI library)
   
-# Overview
+### Overview
 The client script (client.py) offers an intuitive graphical interface powered by Tkinter. This interface allows clients to effortlessly connect to the chat server, communicate with other clients, request online client lists, and download shared files.
 
-# Getting Started
+### Getting Started
 Launch the client script on your machine using the following command:
 python client.py
 
@@ -45,7 +45,7 @@ Messaging is straightforward: use the input box to type messages. For directing 
 
 Utilize the "Online List" button to obtain a list of online clients and the "Files List" button to retrieve a list of available server files. To download shared files, use the format "download,file_name.type" (e.g., "download,image.jpg").
 
-# Essential Points
+### Essential Points
 - The client script supports one connection at a time. For multiple clients, run separate instances of the script.
 - Closing the application window will result in an automatic disconnection.
   
@@ -58,5 +58,5 @@ In both server and client scripts, the UDP (User Datagram Protocol) section faci
 - End of Transfer: The server dispatches a specific packet to signal the file transfer's completion.
 - File Reconstruction: The client pieces together the file from received packets.
   
-# Important Note:
+### Important Note:
 While UDP suffices for some data transfer scenarios, its lack of certain features makes it less suitable for larger or less reliable networks. In such cases, TCP or alternative protocols may be more appropriate.
